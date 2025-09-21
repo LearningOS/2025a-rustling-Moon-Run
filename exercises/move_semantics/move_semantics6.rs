@@ -11,6 +11,7 @@ fn main() {
 
     get_char(data.clone());
 
+    
     string_uppercase(data);
 }
 
