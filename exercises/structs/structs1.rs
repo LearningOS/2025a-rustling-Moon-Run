@@ -24,7 +24,7 @@ mod tests {
 
     #[test]
     fn classic_c_structs() {
-        // ✅ 实例化经典 C 风格 struct
+     
         let green = ColorClassicStruct { red: 0, green: 255, blue: 0 };
 
         assert_eq!(green.red, 0);
@@ -34,7 +34,7 @@ mod tests {
 
     #[test]
     fn tuple_structs() {
-        // ✅ 实例化元组 struct
+  
         let green = ColorTupleStruct(0, 255, 0);
 
         assert_eq!(green.0, 0);
@@ -44,7 +44,7 @@ mod tests {
 
     #[test]
     fn unit_structs() {
-        // ✅ 实例化单元 struct
+  
         let unit_like_struct = UnitLikeStruct;
         let message = format!("{:?}s are fun!", unit_like_struct);
 
