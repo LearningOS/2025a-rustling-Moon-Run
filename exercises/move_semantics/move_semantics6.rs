@@ -9,20 +9,17 @@
 fn main() {
     let data = "Rust is great!".to_string();
 
-    get_char(data.clone());
-
-    
+    // 移动所有权
     string_uppercase(data);
 }
 
-// Should not take ownership
-fn get_char(data: String) -> char {
+// 通过引用，不获取所有权
+fn get_char(data: &String) -> char {
     data.chars().last().unwrap()
 }
 
-// Should take ownership
+// 获取所有权
 fn string_uppercase(mut data: String) {
-    data.to_uppercase();
-
+    data = data.to_uppercase();
     println!("{}", data);
 }
